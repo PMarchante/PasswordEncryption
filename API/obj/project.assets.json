@@ -12940,8 +12940,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DrunkCow\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\Pedro\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -12950,17 +12949,15 @@
       "projectUniqueName": "C:\\source\\repos\\PasswordEncryption\\api\\PasswordEncryption.csproj",
       "projectName": "PasswordEncryption",
       "projectPath": "C:\\source\\repos\\PasswordEncryption\\api\\PasswordEncryption.csproj",
-      "packagesPath": "C:\\Users\\DrunkCow\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
       "outputPath": "C:\\source\\repos\\PasswordEncryption\\api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\DrunkCow\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

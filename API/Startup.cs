@@ -28,7 +28,13 @@ namespace PasswordEncryption
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddCors(opt =>{
+                opt.AddPolicy("local",policy=>{
+                    policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                });
+            });
             services.AddDbContext<UserContext>(opt => opt.UseInMemoryDatabase("Users"));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +50,7 @@ namespace PasswordEncryption
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors("local");
             app.UseMvc();
         }
     }

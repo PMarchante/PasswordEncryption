@@ -6,11 +6,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PasswordEncryption
 {
     public class User
     {
+        
+        public int Id;
         [Key]
         public string UserName { get; set; }
         private string _Password;
@@ -33,7 +36,6 @@ namespace PasswordEncryption
                 }
             }
         }
-
     }
 
 

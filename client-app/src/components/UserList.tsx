@@ -1,6 +1,6 @@
 import React from 'react';
-import { List, Image, Card, Item } from 'semantic-ui-react';
-import IUsers from './models/Users';
+import { Card, Item, Segment } from 'semantic-ui-react';
+import IUsers from '../models/Users';
 import faker from 'faker';
 
 interface IProps {
@@ -9,12 +9,10 @@ interface IProps {
 
 const UserList: React.FC<IProps> = ({ users }) => {
   return (
-    <Card style={{ marginTop: 100 }}>
-      <Card.Content>
-        <Card.Header>User List</Card.Header>
-      </Card.Content>
-      {users.map(Users => (
-        <Card key={Users.userName}>
+    <Segment style={{ marginTop: 100, overflow: 'auto', maxHeight: 500 }}>
+      <h1 style={{ paddingLeft: 100 }}>User List</h1>
+      {users.map((Users) => (
+        <Card key={Users.userName} centered>
           <Item.Group>
             <Item>
               <Item.Image size='tiny' src={faker.image.avatar()} />
@@ -25,7 +23,7 @@ const UserList: React.FC<IProps> = ({ users }) => {
           </Item.Group>
         </Card>
       ))}
-    </Card>
+    </Segment>
   );
 };
 

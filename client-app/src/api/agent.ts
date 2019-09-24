@@ -12,6 +12,7 @@ const requests = {
 
 const Users = {
   list: () => requests.get('/user'),
-  create: (user: IUsers) => requests.post('/user', user)
+  create: (user: IUsers) => requests.post('/user/', user),
+  login: (user: IUsers) => requests.post('/user/login/', user)
 };
 export default Users;

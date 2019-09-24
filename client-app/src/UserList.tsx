@@ -13,16 +13,17 @@ const UserList: React.FC<IProps> = ({ users }) => {
       <Card.Content>
         <Card.Header>User List</Card.Header>
       </Card.Content>
-
       {users.map(Users => (
-        <Item.Group>
-          <Item>
-            <Item.Image size='tiny' src={faker.image.avatar()} />
-            <Item.Content verticalAlign='middle'>
-              <Item.Header>{Users.userName}</Item.Header>
-            </Item.Content>
-          </Item>
-        </Item.Group>
+        <Card key={Users.userName}>
+          <Item.Group>
+            <Item>
+              <Item.Image size='tiny' src={faker.image.avatar()} />
+              <Item.Content verticalAlign='middle'>
+                <Item.Header>{Users.userName}</Item.Header>
+              </Item.Content>
+            </Item>
+          </Item.Group>
+        </Card>
       ))}
     </Card>
   );

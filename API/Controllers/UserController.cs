@@ -22,10 +22,10 @@ namespace PasswordEncryption.Controllers
 
             if (_context.Users.Count() == 0)
             {
-                _context.Users.Add(new User { UserName = "Pedro", Password = "test" });
-                _context.Users.Add(new User { UserName = "John", Password = "test" });
-                _context.Users.Add(new User { UserName = "Jason", Password = "test" });
-                _context.Users.Add(new User { UserName = "Pam", Password = "test" });
+                _context.Users.Add(new User { UserName = "Fuzzy-Kitty47", Password = "test" });
+                _context.Users.Add(new User { UserName = "SoupOrTurtle", Password = "test" });
+                _context.Users.Add(new User { UserName = "PotatoesNSyrup", Password = "test" });
+                _context.Users.Add(new User { UserName = "OptimalPossum", Password = "test" });
                 _context.SaveChangesAsync();
             }
         }

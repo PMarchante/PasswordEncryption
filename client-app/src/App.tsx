@@ -19,9 +19,11 @@ const App: React.FC = () => {
   }, []);
 
   const HandleCreateUser = (user: IUsers) => {
-    agent.create(user).then(() => {
-      setUsers([...users, user]);
-    });
+    if (user.userName != '' && user.password != '') {
+      agent.create(user).then(() => {
+        setUsers([...users, user]);
+      });
+    }
   };
 
   const HandlerLogin = (user: IUsers) => {

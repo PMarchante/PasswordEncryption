@@ -61,10 +61,13 @@ namespace PasswordEncryption.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> Create(User user)
         {
+            if(user.UserName!=""){
+
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-
+            }
             return CreatedAtAction(nameof(GetUsers), new { id = user.UserName }, user);
+                
         }
 
         //// POST: User/Create

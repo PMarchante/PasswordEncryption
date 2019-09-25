@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Modal, Header, Button } from 'semantic-ui-react';
+import { Modal, Button } from 'semantic-ui-react';
 
 interface IProps {
   login: boolean;
@@ -9,7 +9,7 @@ interface IProps {
 const LoginConfirm: React.FC<IProps> = ({ login, HandleOpenModal }) => {
   return (
     <Fragment>
-      <Modal size='small' open={login} onClose={() => HandleOpenModal(false)}>
+      <Modal size='small' open={login}>
         <Modal.Header>Log in was successful!</Modal.Header>
         <Modal.Actions>
           <Button
